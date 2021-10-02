@@ -44,4 +44,22 @@ class CalendarHelper {
         return components.weekday! - 2
     }
     
+    func addDays(date: Date, days: Int) -> Date {
+        return calendar.date(byAdding: .day, value: days, to: date)!
+    }
+    
+    func sundayForDate(date: Date) -> Date {
+        var current = date
+        let oneWeekAgo = addDays(date: current, days: -7)
+        
+        while(current > oneWeekAgo) {
+            let currentWeekday = calendar.dateComponents([.weekday], from: current).weekday
+            if (currentWeekday == 1) {
+                return current
+            }
+            current = addDays(date: current, days: -1)
+        }
+        return current
+    }
+    
 }
