@@ -187,7 +187,7 @@
             </objects>
             <point key="canvasLocation" x="-706" y="84"/>
         </scene>
-        <!--Weekly View Controller-->
+        <!--Weekly Calendar-->
         <scene sceneID="1xU-o5-MCM">
             <objects>
                 <viewController id="lfT-cT-w1H" customClass="WeeklyViewController" customModule="CalendarExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,13 +196,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpt-bn-kWl">
-                                <rect key="frame" x="185" y="84" width="44" height="21"/>
+                                <rect key="frame" x="185" y="106" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLa-hr-b7e">
-                                <rect key="frame" x="289" y="79" width="125" height="31"/>
+                                <rect key="frame" x="289" y="101" width="125" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
@@ -210,7 +210,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgI-YI-JdG">
-                                <rect key="frame" x="0.0" y="79" width="124" height="31"/>
+                                <rect key="frame" x="0.0" y="101" width="124" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                 <connections>
@@ -264,8 +264,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r6V-Wz-iPR">
-                                <rect key="frame" x="0.0" y="229.5" width="414" height="632.5"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r6V-Wz-iPR">
+                                <rect key="frame" x="0.0" y="230" width="414" height="142"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="PeK-ou-gzk">
                                     <size key="itemSize" width="71" height="68"/>
@@ -323,7 +323,7 @@
                             <constraint firstItem="Mpt-bn-kWl" firstAttribute="centerX" secondItem="7W3-Bv-mLk" secondAttribute="centerX" id="wxy-gy-YGo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Uke-Dy-wUK"/>
+                    <navigationItem key="navigationItem" title="Weekly Calendar" id="Uke-Dy-wUK"/>
                     <connections>
                         <outlet property="collectionView" destination="r6V-Wz-iPR" id="bNb-ba-tUY"/>
                         <outlet property="monthLabel" destination="Mpt-bn-kWl" id="ivr-DV-g1x"/>
