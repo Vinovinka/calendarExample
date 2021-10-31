@@ -54,7 +54,7 @@ class CalendarHelper {
         
         while(current > oneWeekAgo) {
             let currentWeekday = calendar.dateComponents([.weekday], from: current).weekday
-            if (currentWeekday == 1) {
+            if (currentWeekday == 2) {
                 return current
             }
             current = addDays(date: current, days: -1)

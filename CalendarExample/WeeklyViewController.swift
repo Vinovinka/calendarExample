@@ -65,10 +65,7 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.dayOfMonth.text = String(CalendarHelper().dayOfMonth(date: data))
         
         if(data == selectedDate) {
-            cell.backgroundColor = UIColor.systemRed
-            cell.layer.cornerRadius = 30
-            cell.contentMode = .scaleAspectFill
-            cell.layer.masksToBounds = true
+            cell.backgroundColor = UIColor.systemGreen
         } else {
             cell.backgroundColor = UIColor.white
         }
