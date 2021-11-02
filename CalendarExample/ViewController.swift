@@ -8,6 +8,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var selectedDate = Date()
     var totalSquare = [String]()
+    var totalSquareDates = [Date]()
+    var currentMonth = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.reloadData()
     }
     
+//    func setMonthDateView() {
+//        totalSquareDates.removeAll()
+//        
+//        var current = CalendarHelper().sundayForDate(date: selectedDate)
+//
+//    }
+    
     
     @IBAction func nextMonth(_ sender: Any) {
         selectedDate = CalendarHelper().plusMonth(date: selectedDate)
@@ -72,6 +81,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "calCell", for: indexPath) as! CalendarCell
         cell.dayOfMonth.text = totalSquare[indexPath.item]
+        
+        let data = totalSquare[indexPath.row]
+
+        let todayDate = CalendarHelper().dayOfMonthString(date: selectedDate)
+        
+        if(data.hasPrefix(todayDate)) {
+            cell.backgroundColor = UIColor.systemRed
+            cell.layer.cornerRadius = cell.frame.size.width / 2
+            cell.clipsToBounds = true
+            cell.dayOfMonth.textColor = UIColor.white
+        } else {
+            cell.backgroundColor = UIColor.white
+        }
+        
+//        if currentMonth == months[calendar.component(.month, from: date) - 1] && year == calendar.component(.year, from: date) && indexPath.row + 1 == day {
+//            cell.backgroundColor = UIColor.red
+//        }
+        
         
         return cell
     }

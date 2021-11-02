@@ -12,7 +12,7 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         setCellsView()
-        setMonthView()
+        setWeekView()
     }
     
     func setCellsView() {
@@ -23,7 +23,7 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
         flowLayout.itemSize = CGSize(width: width, height: height)
     }
     
-    func setMonthView() {
+    func setWeekView() {
         totalSquare.removeAll()
         
         var current = CalendarHelper().sundayForDate(date: selectedDate)
@@ -42,12 +42,12 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBAction func nextWeek(_ sender: Any) {
         selectedDate = CalendarHelper().addDays(date: selectedDate, days: 7)
-        setMonthView()
+        setWeekView()
     }
     
     @IBAction func previousWeek(_ sender: Any) {
         selectedDate = CalendarHelper().addDays(date: selectedDate, days: -7)
-        setMonthView()
+        setWeekView()
     }
     
     override open var shouldAutorotate: Bool {

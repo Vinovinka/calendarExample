@@ -78,10 +78,10 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cal-pt-x7t">
-                                <rect key="frame" x="20" y="229" width="374" height="614"/>
+                                <rect key="frame" x="20" y="229" width="374" height="360"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="614" id="KTB-wa-cgO"/>
+                                    <constraint firstAttribute="height" constant="360" id="KTB-wa-cgO"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="NKM-60-VLo">
                                     <size key="itemSize" width="60" height="60"/>
@@ -97,14 +97,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EET-LT-1kB">
-                                                    <rect key="frame" x="12.5" y="21" width="35.5" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EET-LT-1kB">
+                                                    <rect key="frame" x="12.5" y="21.5" width="35.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EET-LT-1kB" firstAttribute="centerX" secondItem="dsn-dT-SoS" secondAttribute="centerX" id="7nW-Ny-9Cr"/>
+                                                <constraint firstItem="EET-LT-1kB" firstAttribute="centerY" secondItem="dsn-dT-SoS" secondAttribute="centerY" id="xJH-O4-en8"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="60" height="60"/>
                                         <connections>
@@ -134,7 +137,7 @@
                             <constraint firstItem="cal-pt-x7t" firstAttribute="top" secondItem="i7e-7N-RFq" secondAttribute="bottom" constant="27" id="HMp-zv-x9C"/>
                             <constraint firstItem="dgN-XA-PwN" firstAttribute="centerY" secondItem="uLb-SW-nrj" secondAttribute="centerY" id="Qvm-bi-RkH"/>
                             <constraint firstItem="dgN-XA-PwN" firstAttribute="centerY" secondItem="OAF-lN-dQf" secondAttribute="centerY" id="SGG-mD-v3Y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cal-pt-x7t" secondAttribute="bottom" constant="19" id="VeJ-Ub-YUT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cal-pt-x7t" secondAttribute="bottom" constant="273" id="VeJ-Ub-YUT"/>
                             <constraint firstItem="cal-pt-x7t" firstAttribute="centerX" secondItem="i7e-7N-RFq" secondAttribute="centerX" id="mAd-je-Xyk"/>
                             <constraint firstItem="cal-pt-x7t" firstAttribute="centerX" secondItem="dgN-XA-PwN" secondAttribute="centerX" id="qL3-Wd-eEa"/>
                             <constraint firstItem="uLb-SW-nrj" firstAttribute="leading" secondItem="dgN-XA-PwN" secondAttribute="trailing" constant="60" id="rik-sg-sAN"/>
